@@ -1,0 +1,23 @@
+<div class="max-width">
+  <div class="my-skills-container">
+    <div class="icons">
+      <div *ngFor="let skill of skills" class="skills">
+        <img [src]="skill.icon" alt="{{ skill.name }}" />
+        <span>{{ skill.name }}</span>
+      </div>
+    </div>
+    <div class="my-skills-text">
+      <div class="title-line">
+        <h1>Skills</h1>
+        <div class="line"></div>
+      </div>
+      <p>
+        Folgende Tools und Programmiersprachen helfen mir, grandiose Projekte
+        umzusetzen.
+      </p>
+      <div class="button">
+        <button mat-raised-button>Get in touch</button>
+      </div>
+    </div>
+  </div>
+</div>
