@@ -5,6 +5,16 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  position: relative;
+  padding-top: 100px;
+
+  .curve {
+    width: 100%;
+    margin-top: -220px; //set margin till it fits the image
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .icons {
@@ -17,7 +27,7 @@
   .skills {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex: 0 0 25%;
     padding-bottom: 54px;

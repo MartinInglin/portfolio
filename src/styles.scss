@@ -17,6 +17,20 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  color: $dark-blue;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+h3 {
+  color: $light-blue;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 27px;
+}
+
 p {
   color: white;
   font-size: 16px;
@@ -30,6 +44,17 @@ p {
   justify-content: center;
   width: 100%;
   position: relative;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.column-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* scrollbar */

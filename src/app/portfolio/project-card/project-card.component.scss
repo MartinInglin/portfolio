@@ -1,0 +1,55 @@
+@import "./../../../styles.scss";
+
+.project-card-container {
+  display: flex;
+}
+
+.image {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 60%;
+  };
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  width: 45%;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 35px;
+  padding-top: 20px;
+}
+
+button {
+  font-size: 23px;
+  font-weight: 400;
+  height: 58px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  transition: all 125ms ease-in-out;
+
+  &:hover {
+    background-color: $light-blue;
+    transition: all 125ms ease-in-out;
+  }
+}
+
+.button-live-test {
+    background-color: $dark-blue;
+    color: white;
+}
+
+.button-github {
+    background-color: transparent;
+    outline: 1px $light-blue solid;
+    color: white;
+}

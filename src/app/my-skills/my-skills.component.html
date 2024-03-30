@@ -1,12 +1,15 @@
 <div class="max-width">
   <div class="my-skills-container">
-    <div class="icons">
+    <img class="curve" src="./../../assets/images/curve.svg" alt="" />
+    <div class="icons z-index-2">
       <div *ngFor="let skill of skills" class="skills">
-        <img [src]="skill.icon" alt="{{ skill.name }}" />
-        <span>{{ skill.name }}</span>
+        <div class="column-centered">
+          <img [src]="skill.icon" alt="{{ skill.name }}" />
+          <span>{{ skill.name }}</span>
+        </div>
       </div>
     </div>
-    <div class="my-skills-text">
+    <div class="my-skills-text z-index-2">
       <div class="title-line">
         <h1>Skills</h1>
         <div class="line"></div>
