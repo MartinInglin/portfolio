@@ -1,4 +1,4 @@
-@import './../../styles.scss';
+@import "./../../styles.scss";
 
 .position-absolute {
   position: absolute;
@@ -6,6 +6,25 @@
   left: 0;
   z-index: 999;
 }
+
+.mat-button-toggle-group {
+  border: none;
+
+}
+
+.mat-button-toggle {
+  background-color: $dark-blue;
+  font-family: 'Poppins';
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.mat-button-toggle-checked{
+  background-color: #2979FF;
+  color: white;
+} 
 
 .nav-bar-container {
   display: flex;
@@ -21,14 +40,16 @@
 }
 
 .nav-bar-links {
-    display: flex;
-    gap: 29px;
+  display: flex;
+  gap: 29px;
   a {
     color: white;
     font-weight: 400;
     text-decoration: none;
     font-size: 23px;
     transition: 125ms ease-in-out;
+    display: flex;
+    align-items: center;
 
     &:hover {
       color: $light-blue;

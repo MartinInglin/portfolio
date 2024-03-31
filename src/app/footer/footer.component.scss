@@ -1,0 +1,44 @@
+@import "./../../styles.scss";
+
+.footer-container {
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+}
+
+.logo-impressum {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        height: 70px;
+        cursor: pointer;
+    }
+
+    p {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+}
+
+.copyright {
+    font-size: 23px;
+    color: white;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+.media-links {
+    display: flex;
+    gap: 42px
+    ;
+    img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
