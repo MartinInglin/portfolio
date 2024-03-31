@@ -1,0 +1,254 @@
+@import "./../../styles.scss";
+@import "./../../../node_modules/@angular/material/button/button-base";
+
+.contact-container {
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.contact-title {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  justify-content: center;
+
+  .title-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding-bottom: 50px;
+  }
+
+  .spacer {
+    width: 100%;
+  }
+
+  .line {
+    height: 4px;
+    background-color: $light-blue;
+  }
+}
+
+.contact-text {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 50%;
+
+  .text-title-line {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .text-line {
+    width: 65px;
+    height: 4px;
+    background-color: $light-green;
+  }
+
+  p {
+    padding: 0 100px;
+  }
+}
+
+.contact-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 100px;
+  box-sizing: border-box;
+  gap: 32px;
+  z-index: 999;
+
+  input,
+  textarea {
+    font-family: "Poppins";
+    padding: 15px 25px;
+    border: $dark-blue 1px solid;
+    border-radius: 10px;
+    background-color: #141d2f;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+    &::placeholder {
+      color: white;
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 19px;
+    }
+  }
+}
+
+.privacy-policy {
+  display: flex;
+  gap: 8px;
+
+  p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+    color: $dark-blue;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button[mat-raised-button] {
+  background-color: $light-blue;
+  color: white;
+  font-size: 23px;
+  font-weight: 400;
+  height: 58px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  transition: all 125ms ease-in-out;
+
+  &:hover {
+    background-color: $light-green;
+    transform: scale(1.1);
+    transition: all 125ms ease-in-out;
+  }
+}
+
+.color-stains {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: calc(100vw + 500px);
+  overflow-y: hidden;
+
+  img {
+    position: absolute;
+    bottom: -600px;
+    right: 140px;
+  }
+}
+
+.arrow-up-container {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+  padding: 20px 100px;
+  box-sizing: border-box;
+
+  .position-left {
+    position: relative;
+  }
+
+  .arrow-up {
+    transition: 125ms ease-in-out;
+
+    &:hover {
+      transition: 125ms ease-in-out;
+    }
+  }
+
+  .arrow-up-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 125ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transition: 125ms ease-in-out;
+      opacity: 1;
+    }
+  }
+}
+
+/* Customize the label (the container) */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: $light-blue 1px solid;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: $light-blue;
+  opacity: 0.5;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid $light-blue;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
