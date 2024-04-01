@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-privacy-policy',
+  selector: 'app-impressum',
   standalone: true,
   imports: [MatButtonModule],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
+  templateUrl: './impressum.component.html',
+  styleUrl: './impressum.component.scss'
 })
-export class PrivacyPolicyComponent {
+export class ImpressumComponent {
 
 }
