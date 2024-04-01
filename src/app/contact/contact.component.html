@@ -1,7 +1,7 @@
 <div class="max-width">
   <div class="contact-container">
     <div class="color-stains">
-      <img src="./../../assets/images/color-stains/contact.svg" alt="" />
+      <img src="assets/images/color-stains/contact.svg" alt="" />
     </div>
     <div class="contact-title">
       <div class="title-line">
@@ -23,27 +23,72 @@
           </p>
         </div>
 
-        <form class="contact-form">
-          <input type="text" name="name" id="name" placeholder="Name" />
-          <input type="email" name="email" id="email" placeholder="Email" />
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Nachricht"
-          ></textarea>
+        <form
+          class="contact-form"
+          (ngSubmit)="onSubmit(contactForm)"
+          #contactForm="ngForm"
+        >
+          <div class="input-name">
+            <input
+              [(ngModel)]="contactData.name"
+              #name="ngModel"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
+            @if (!name.valid && contactForm.submitted) {
+            <span class="missing-form">Please enter your name.</span>
+            }
+          </div>
+
+          <div class="input-email">
+            <input
+              [(ngModel)]="contactData.email"
+              #email="ngModel"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            />
+            @if (!email.valid && contactForm.submitted) {
+            <span class="missing-form">Please enter your mail address.</span>
+            }
+          </div>
+
+          <div class="input-textarea">
+            <textarea
+              [(ngModel)]="contactData.message"
+              #message="ngModel"
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Nachricht"
+              required
+            ></textarea>
+            @if (!message.valid && contactForm.submitted) {
+            <span class="missing-form">Please enter a message.</span>
+            }
+          </div>
+
           <div class="privacy-policy">
             <label class="checkbox-container">
-              <input type="checkbox" />
+              <input type="checkbox" (click)="checkPrivacyPolicy()" />
               <span class="checkmark"></span>
             </label>
-
             <p>
               Ich habe die <a href="">privacy policy</a> gelesen und stimme der
               Verwendung meiner Daten wie beschrieben zu.
             </p>
+            @if (!privacyPolicy && contactForm.submitted) {
+            <span class="missing-form">Please check the privacy policy.</span>
+            }
           </div>
+
           <div class="button" type="submit" value="Submit">
             <button mat-raised-button>Nachricht abschicken</button>
           </div>
@@ -51,14 +96,16 @@
       </div>
     </div>
     <div class="arrow-up-container">
-      <div class="position-left">
-        <img
-          class="arrow-up-hover"
-          src="./../../assets/images/arrow-up-hover.svg"
-          alt=""
-        />
-        <img class="arrow-up" src="./../../assets/images/arrow-up.svg" alt="" />
-      </div>
+      <a href="#above-the-fold">
+        <div class="position-left">
+          <img
+            class="arrow-up-hover"
+            src="assets/images/arrow-up-hover.svg"
+            alt=""
+          />
+          <img class="arrow-up" src="assets/images/arrow-up.svg" alt="" />
+        </div>
+      </a>
     </div>
   </div>
 </div>

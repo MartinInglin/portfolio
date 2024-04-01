@@ -1,9 +1,9 @@
 <div class="max-width">
   <div class="my-skills-container">
-    <img class="curve" src="./../../assets/images/curve.svg" alt="" />
+    <img class="curve" src="assets/images/curve.svg" alt="" />
     <div class="icons z-index-2">
       <div *ngFor="let skill of skills" class="skills">
-        <div class="column-centered">
+        <div class="skill">
           <img [src]="skill.icon" alt="{{ skill.name }}" />
           <span>{{ skill.name }}</span>
         </div>
@@ -19,7 +19,9 @@
         umzusetzen.
       </p>
       <div class="button">
-        <button mat-raised-button>Get in touch</button>
+        <a href="#contact">
+          <button mat-raised-button>Get in touch</button>
+        </a>
       </div>
     </div>
   </div>

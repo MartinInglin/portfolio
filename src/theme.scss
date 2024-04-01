@@ -1,0 +1,40 @@
+@use "@angular/material" as mat;
+
+$dark-blue: #4b47ff;
+$light-blue: #00bee8;
+$light-green: #1ce6b6;
+$background: #141d2f;
+
+.mat-button-toggle-group {
+    border: none;
+  }
+  
+  .mat-button-toggle {
+    background-color: $dark-blue;
+    opacity: 0.2;
+    font-family: "Poppins";
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 23px;
+  }
+  
+  .mat-button-toggle-checked {
+    background-color: #4b47ff !important;
+    opacity: 1;
+    color: white !important;
+  }
+  
+  .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after {
+    display: none;
+  }
+  
+  .mat-button-toggle .mat-pseudo-checkbox {
+    display: none;
+  }
+  
+  .mat-button-toggle-group-appearance-standard
+    .mat-button-toggle-appearance-standard
+    + .mat-button-toggle-appearance-standard {
+    border-left: solid 0px var(--mat-standard-button-toggle-divider-color);
+  }

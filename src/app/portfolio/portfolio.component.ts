@@ -27,7 +27,7 @@ export class PortfolioComponent {
       description:
         'Ein Organisationstool im Stile eines Kanban-Boards. Tasks lassen sich per drag and drop verschieben, User können einem Task zugewiesen und Subtasks definiert werden.',
       link: 'https://linkToJoin',
-      github: 'https://linkToGithub',
+      github: 'https://github.com/MartinInglin/join',
       imagePath: './../../assets/images/PC-Mokups/join.png',
       isImageLeft: true,
     },
@@ -37,7 +37,7 @@ export class PortfolioComponent {
       description:
         'Ein Jump and Run Game um die Figur Pepe. Object Oriented Programming stand bei der Entwicklung im Vordergrund.',
       link: 'https://linkToJoin',
-      github: 'https://linkToGithub',
+      github: 'https://github.com/MartinInglin/el-pollo-loco',
       imagePath: './../../assets/images/PC-Mokups/el-pollo-loco.png',
       isImageLeft: false,
     },
@@ -47,7 +47,7 @@ export class PortfolioComponent {
       description:
         'Daten von einer öffentlichen API herunterladen und rendern, das war das Ziel dieses Projekts.',
       link: 'https://linkToJoin',
-      github: 'https://linkToGithub',
+      github: 'https://github.com/MartinInglin/pokedex',
       imagePath: './../../assets/images/PC-Mokups/pokedex.png',
       isImageLeft: true,
     },

@@ -17,14 +17,28 @@ interface Skill {
 export class MySkillsComponent {
   skills: Skill[] = [
     { name: 'Angular', icon: './../../assets/images/icons-skills/angular.svg' },
-    { name: 'TypeScript', icon: './../../assets/images/icons-skills/typescript.svg' },
-    { name: 'JavaScript', icon: './../../assets/images/icons-skills/javascript.svg' },
+    {
+      name: 'TypeScript',
+      icon: './../../assets/images/icons-skills/typescript.svg',
+    },
+    {
+      name: 'JavaScript',
+      icon: './../../assets/images/icons-skills/javascript.svg',
+    },
     { name: 'HTML', icon: './../../assets/images/icons-skills/html.svg' },
-    { name: 'Firebase', icon: './../../assets/images/icons-skills/firebase.svg' },
+    {
+      name: 'Firebase',
+      icon: './../../assets/images/icons-skills/firebase.svg',
+    },
     { name: 'Git', icon: './../../assets/images/icons-skills/git.svg' },
     { name: 'CSS', icon: './../../assets/images/icons-skills/css.svg' },
     { name: 'Rest-Api', icon: './../../assets/images/icons-skills/api.svg' },
     { name: 'Scrum', icon: './../../assets/images/icons-skills/scrum.svg' },
-    { name: 'Material design', icon: './../../assets/images/icons-skills/materialUi.svg' },
+    {
+      name: 'Material design',
+      icon: './../../assets/images/icons-skills/materialUi.svg',
+    },
   ];
+
+  constructor() {}
 }

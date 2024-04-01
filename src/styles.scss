@@ -1,12 +1,11 @@
-$dark-blue: #4b47ff;
-$light-blue: #00bee8;
-$light-green: #1ce6b6;
+@import './theme.scss';
 
 html,
 body {
   margin: 0;
   font-family: "Poppins";
   background-color: #141d2f;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -56,13 +55,6 @@ p {
 
 .z-index-2 {
   z-index: 2;
-}
-
-.column-centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .row {

@@ -43,7 +43,17 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
+    max-width: 100px;
+    text-align: center;
   }
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
 }
 
 .my-skills-text {
@@ -53,6 +63,7 @@
   flex-direction: column;
   gap: 35px;
   justify-content: center;
+  padding-bottom: 54px;
 
   .title-line {
     display: flex;
