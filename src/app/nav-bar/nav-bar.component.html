@@ -5,9 +5,9 @@
       <a href="#about-me">About Me</a>
       <a href="#skills">Skills</a>
       <a href="#portfolio">Portfolio</a>      
-      <mat-button-toggle-group>
-        <mat-button-toggle value="english" checked>EN</mat-button-toggle>
-        <mat-button-toggle value="german">DE</mat-button-toggle>
+      <mat-button-toggle-group (change)="onLanguageChange($event)">
+        <mat-button-toggle value="english" [checked]="selectedLanguage === 'english'">EN</mat-button-toggle>
+        <mat-button-toggle value="german" [checked]="selectedLanguage === 'german'">DE</mat-button-toggle>
       </mat-button-toggle-group>
     </div>
   </div>
