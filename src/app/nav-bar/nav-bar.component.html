@@ -2,12 +2,16 @@
   <div class="nav-bar-container">
     <img src="assets/images/martin-logo-transparent.svg" alt="" />
     <div class="nav-bar-links">
-      <a href="#about-me">About Me</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>      
+      <a href="#about-me">{{ "NAV_BAR_ABOUT_ME" | translate }}</a>
+      <a href="#skills">{{ "NAV_BAR_SKILLS" | translate }}</a>
+      <a href="#portfolio">{{ "NAV_BAR_PORTFOLIO" | translate }}</a>
       <mat-button-toggle-group (change)="onLanguageChange($event)">
-        <mat-button-toggle value="english" [checked]="selectedLanguage === 'english'">EN</mat-button-toggle>
-        <mat-button-toggle value="german" [checked]="selectedLanguage === 'german'">DE</mat-button-toggle>
+        <mat-button-toggle value="en" [checked]="selectedLanguage === 'en'"
+          >EN</mat-button-toggle
+        >
+        <mat-button-toggle value="de" [checked]="selectedLanguage === 'de'"
+          >DE</mat-button-toggle
+        >
       </mat-button-toggle-group>
     </div>
   </div>

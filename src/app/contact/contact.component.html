@@ -6,20 +6,19 @@
     <div class="contact-title">
       <div class="title-line">
         <div class="spacer"></div>
-        <h1>Contact</h1>
+        <h1>{{ "CONTACT_TITLE" | translate }}</h1>
         <div class="line spacer"></div>
       </div>
       <div class="row">
         <div class="contact-text">
           <div class="text-title-line">
             <div class="text-line"></div>
-            <h4>Wie kann ich Ihnen helfen?</h4>
+            <h4>{{ "CONTACT_SUBTITLE" | translate }}</h4>
           </div>
           <p>
-            Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf,
-            von Ihnen zu hören und bin gespannt, welche Projekte Sie umsetzen
-            möchten. <br /><br />
-            Sie brauchen einen Entwickler? <b>Kontaktieren Sie mich.</b>
+            {{ "CONTACT_TEXT_PART_ONE" | translate }} <br /><br />
+            {{ "CONTACT_TEXT_PART_TWO" | translate }}
+            <b>{{ "CONTACT_TEXT_PART_THREE" | translate }}</b>
           </p>
         </div>
 
@@ -39,7 +38,9 @@
               required
             />
             @if (!name.valid && contactForm.submitted) {
-            <span class="missing-form">Please enter your name.</span>
+            <span class="missing-form">{{
+              "CONTACT_MISSING_NAME" | translate
+            }}</span>
             }
           </div>
 
@@ -55,7 +56,9 @@
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             />
             @if (!email.valid && contactForm.submitted) {
-            <span class="missing-form">Please enter your mail address.</span>
+            <span class="missing-form">{{
+              "CONTACT_MISSING_EMAIL" | translate
+            }}</span>
             }
           </div>
 
@@ -67,11 +70,13 @@
               id="message"
               cols="30"
               rows="10"
-              placeholder="Nachricht"
+              placeholder="Message"
               required
             ></textarea>
             @if (!message.valid && contactForm.submitted) {
-            <span class="missing-form">Please enter a message.</span>
+            <span class="missing-form">{{
+              "CONTACT_MISSING_MESSAGE" | translate
+            }}</span>
             }
           </div>
 
@@ -81,16 +86,23 @@
               <span class="checkmark"></span>
             </label>
             <p>
-              Ich habe die <a href="privacy-policy">privacy policy</a> gelesen und stimme der
-              Verwendung meiner Daten wie beschrieben zu.
+              {{ "CONTACT_PRIVACY_POLICY_PART_ONE" | translate }}
+              <a href="privacy-policy">
+                {{ "CONTACT_PRIVACY_POLICY_PART_TWO" | translate }}</a
+              >
+              {{ "CONTACT_PRIVACY_POLICY_PART_THREE" | translate }}
             </p>
             @if (!privacyPolicy && contactForm.submitted) {
-            <span class="missing-form">Please check the privacy policy.</span>
+            <span class="missing-form">{{
+              "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY" | translate
+            }}</span>
             }
           </div>
 
           <div class="button" type="submit" value="Submit">
-            <button mat-raised-button>Nachricht abschicken</button>
+            <button mat-raised-button>
+              {{ "CONTACT_SUBMIT" | translate }}
+            </button>
           </div>
         </form>
       </div>

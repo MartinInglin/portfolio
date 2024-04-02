@@ -5,7 +5,8 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class TranslationService {
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) {
+  }
 
   getTranslation(key: string): string | undefined {
     return this.translate.instant(key);

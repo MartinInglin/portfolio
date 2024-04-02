@@ -16,7 +16,6 @@ import { ContactComponent } from '../contact/contact.component';
     MySkillsComponent,
     PortfolioComponent,
     ContactComponent,
-    
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',

@@ -1,0 +1,37 @@
+{
+  "NAV_BAR_ABOUT_ME": "Über mich",
+  "NAV_BAR_SKILLS": "Fähigkeiten",
+
+  "ABOVE_THE_FOLD_I_AM": "Ich bin",
+  "ABOVE_THE_FOLD_LETS_TALK": "Kaffee?",
+  "ABOVE_THE_FOLD_SCROLL_DOWN": "Hier geht's weiter",
+
+  "ABOUT_ME_TITLE": "Über mich",
+  "ABOUT_ME_FIRST_SPAN": "Gestatten: Martin Inglin, Software Entwickler und motiviert bis in die Fingerspitzen, Ihr Projekt umzusetzen. Mein Motto: Der Horizont ist unsere Kreativität.",
+  "ABOUT_ME_SECOND_SPAN": "Sie haben eine Idee für eine App, die die Welt verändert? Sie möchten Ihre Webseite auf Vordermann bringen und ihre Kunden begeistern? Gerne helfe ich Ihnen dabei, Ihre Vorstellungen umzusetzen.",
+  "ABOUT_ME_THIRD_SPAN": "Sie sind bereits auf dem Weg und brauchen Unterstützung in Ihrem Team? Melden Sie sich, damit wir gemeinsam herausfinden, wie ich Ihnen behilflich sein kann.",
+
+  "SKILLS_TITLE": "Fähigkeiten",
+  "SKILLS_TEXT": "Folgende Tools und Programmiersprachen helfen mir, Ihre Projekte umzusetzen.",
+  "SKILLS_BUTTON": "Kontakt",
+
+  "PORTFOLIO_TITLE": "Portfolio",
+  "PORTFOLIO_TEXT": "Eine Auswahl aus meinen bislang umgesetzten Projekten.",
+
+  "CONTACT_TITLE": "Kontakt",
+  "CONTACT_SUBTITLE": "Wie kann ich Ihnen helfen?",
+  "CONTACT_TEXT_PART_ONE": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören und bin gespannt, welche Projekte Sie umsetzen möchten.",
+  "CONTACT_TEXT_PART_TWO": "Sie brauchen einen Entwickler?",
+  "CONTACT_TEXT_PART_THREE": "Kontaktieren Sie mich.",
+  "CONTACT_MESSAGE": "Nachricht",
+  "CONTACT_PRIVACY_POLICY_PART_ONE": "Ich habe die",
+  "CONTACT_PRIVACY_POLICY_PART_TWO": "privacy policy",
+  "CONTACT_PRIVACY_POLICY_PART_THREE": " gelesen und stimme der Verwendung meiner Daten wie beschrieben zu.",
+  "CONTACT_SUBMIT": "Abschicken",
+  "CONTACT_MISSING_NAME": "Bitte tragen Sie einen Namen ein.",
+  "CONTACT_MISSING_EMAIL": "Bitte tragen Sie eine Email-Adresse ein.",
+  "CONTACT_MISSING_MESSAGE": "Bitte schreiben Sie eine Nachricht.",
+  "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY": "Bitte bestätigen Sie die privacy policy.",
+
+  "FOOTER_IMPRINT": "Impressum"
+}
