@@ -22,13 +22,14 @@ interface Project {
 })
 export class ProjectCardComponent {
   @Input() project: Project = {} as Project;
-  selectedLang: string = '';
+  selectedLanguage: string = '';
 
   constructor(public translateService: TranslateService) {}
 
   ngOnInit() {
+    this.selectedLanguage = 'en';
     this.translateService.onLangChange.subscribe((event) => {
-      this.selectedLang = event.lang;
+      this.selectedLanguage = event.lang;
     });
   }
 }

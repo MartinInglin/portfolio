@@ -26,6 +26,7 @@
           class="contact-form"
           (ngSubmit)="onSubmit(contactForm)"
           #contactForm="ngForm"
+          autocomplete="off"
         >
           <div class="input-name">
             <input
@@ -70,7 +71,7 @@
               id="message"
               cols="30"
               rows="10"
-              placeholder="Message"
+              placeholder="{{'CONTACT_MESSAGE' | translate}}"
               required
             ></textarea>
             @if (!message.valid && contactForm.submitted) {

@@ -5,7 +5,7 @@
   <div class="text-container">
     <h2>{{ project.title }}</h2>
     <h3>{{ project.technologies }}</h3>
-    <p>{{ project.description['{{selectedLang}}'] }}</p>
+    <p>{{ project.description[selectedLanguage] }}</p>
     <div class="buttons-container">
       <a href="{{ project.link }}">
         <button class="button-live-test" mat-raised-button>Live test</button>
