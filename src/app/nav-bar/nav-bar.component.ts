@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatButtonToggleChange, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -11,8 +11,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
+  @Input() isMobileMenuOpen = false;
   selectedLanguage: string = 'en';
-  isMobileMenuOpen = false;
 
   constructor(private translate: TranslateService) {} // Inject TranslateService
 

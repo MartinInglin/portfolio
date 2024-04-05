@@ -1,4 +1,4 @@
-@import './theme.scss';
+@import "./theme.scss";
 
 html,
 body {
@@ -67,12 +67,20 @@ a {
   flex-direction: row;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 /* scrollbar */
 
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
+  @media (max-width: 768px) {
+    height: 0;
+    width: 0;
+  }
 }
 
 /* Track */
