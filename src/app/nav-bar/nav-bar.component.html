@@ -1,6 +1,9 @@
 <div class="max-width position-absolute">
   <div class="nav-bar-container">
     <img src="assets/images/martin-logo-transparent.svg" alt="" />
+    <div class="z-index-4">
+      <img class="burger" src="assets/images/buger-menu/burger.svg" alt="" (click)="toggleMobileMenu()">
+    </div>
     <div class="nav-bar-links">
       <a href="#about-me">{{ "NAV_BAR_ABOUT_ME" | translate }}</a>
       <a href="#skills">{{ "NAV_BAR_SKILLS" | translate }}</a>
@@ -14,5 +17,14 @@
         >
       </mat-button-toggle-group>
     </div>
+    <div class="menu-mobile-container" [ngClass]="{ 'menu-active': isMobileMenuOpen }" (click)="toggleMobileMenu()">
+      <div class="menu-mobile">
+        <a href="#about-me">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
   </div>
 </div>
