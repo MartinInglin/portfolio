@@ -23,6 +23,7 @@ interface Project {
 export class ProjectCardComponent {
   @Input() project: Project = {} as Project;
   selectedLanguage: string = '';
+  isMobileView = isSmallScreen();
 
   constructor(public translateService: TranslateService) {}
 
@@ -31,5 +32,12 @@ export class ProjectCardComponent {
     this.translateService.onLangChange.subscribe((event) => {
       this.selectedLanguage = event.lang;
     });
+    window.addEventListener('resize', () => {
+      this.isMobileView = isSmallScreen();
+    });
   }
+}
+
+function isSmallScreen() {
+  return window.innerWidth < 769;
 }

@@ -38,6 +38,15 @@
   }
 }
 
+.context-text-container {
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .contact-text {
   box-sizing: border-box;
   display: flex;
@@ -45,20 +54,33 @@
   gap: 35px;
   width: 50%;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   .text-title-line {
     display: flex;
     align-items: center;
     gap: 35px;
+    @media (max-width: 480px) {
+      gap: 5px;
+    }
   }
 
   .text-line {
     width: 65px;
     height: 4px;
     background-color: $light-green;
+    @media (max-width: 480px) {
+      width: 20px;
+    }
   }
 
   p {
     padding: 0 100px;
+    @media (max-width: 480px) {
+      padding: 0 25px;
+    }
   }
 }
 
@@ -70,6 +92,14 @@
   box-sizing: border-box;
   gap: 32px;
   z-index: 3;
+  @media (max-width: 768px) {
+    padding-right: 0;
+    padding: 100px;
+    width: 100%;
+  }
+  @media (max-width: 480px) {
+    padding: 25px;
+  }
 
   div {
     width: 100%;
@@ -87,11 +117,11 @@
       line-height: 19px;
       width: 100%;
       box-sizing: border-box;
-  
+
       &:focus {
         outline: $light-green 1px solid;
       }
-  
+
       &::placeholder {
         color: white;
         font-size: 16px;
@@ -100,8 +130,6 @@
       }
     }
   }
-
-
 }
 
 .input-name {
@@ -192,6 +220,12 @@ button[mat-raised-button] {
     transform: scale(1.1);
     transition: all 125ms ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 19px;
+    height: auto;
+  }
 }
 
 .color-stains {
@@ -212,9 +246,13 @@ button[mat-raised-button] {
 .arrow-up-container {
   display: flex;
   justify-content: flex-end;
-  z-index: 999;
+  z-index: 4;
   padding: 20px 100px;
   box-sizing: border-box;
+
+  @media (max-width: 480px) {
+    padding: 20px 25px;
+  }
 
   .position-left {
     position: relative;

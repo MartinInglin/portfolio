@@ -14,11 +14,11 @@ export class NavBarComponent {
   @Input() isMobileMenuOpen = false;
   selectedLanguage: string = 'en';
 
-  constructor(private translate: TranslateService) {} // Inject TranslateService
+  constructor(private translate: TranslateService) {}
 
   onLanguageChange(event: MatButtonToggleChange) {
     this.selectedLanguage = event.value;
-    this.translate.use(this.selectedLanguage); // Use the injected service
+    this.translate.use(this.selectedLanguage);
   }
 
   toggleMobileMenu() {

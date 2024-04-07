@@ -2,6 +2,10 @@
 
 .project-card-container {
   display: flex;
+  @media(max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .image {
@@ -9,6 +13,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 
   img {
     width: 60%;
@@ -21,6 +29,11 @@
   justify-content: center;
   gap: 15px;
   width: 45%;
+  @media(max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .buttons-container {
@@ -33,6 +46,7 @@ button {
   font-size: 23px;
   font-weight: 400;
   height: 58px;
+  width: 165px;
   padding: 15px 30px;
   border-radius: 10px;
   transition: all 125ms ease-in-out;
@@ -40,6 +54,14 @@ button {
   &:hover {
     background-color: $light-blue;
     transition: all 125ms ease-in-out;
+  }
+
+  @media(max-width: 1200px) {
+    font-size: 16px;
+    line-height: 19px;
+    height: auto;
+    padding: 14px;
+    width: 105px;
   }
 }
 

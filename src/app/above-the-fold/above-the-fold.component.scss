@@ -7,6 +7,7 @@
   color: white;
   position: relative;
   overflow-x: hidden;
+  margin-bottom: 100px;
 }
 
 .title {
@@ -33,6 +34,12 @@
       transform: scale(1.1);
       transition: all 125ms ease-in-out;
     }
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 19px;
+      height: auto;
+    }
   }
 }
 
@@ -42,11 +49,26 @@
   z-index: 3;
 
   .i-am {
-    transform: rotate(-90deg);
+    transform: rotate(-180deg);
+    writing-mode: vertical-rl;
     font-size: 90px;
     font-weight: 400;
-    line-height: 212px;
-    word-spacing: 20px;
+    line-height: 90px;
+    padding-left: 30px;
+    @media (max-width: 1200px) {
+      font-size: 48px;
+      line-height: 48px;
+      padding-left: 15px;
+    }
+    @media (max-width: 768px) {
+      font-size: 32px;
+      line-height: 32px;
+      padding-left: 10px;
+    }
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -56,15 +78,44 @@
 
   .name {
     font-size: 128px;
+    line-height: 128px;
     font-weight: 700;
-    line-height: 153px;
+    padding-bottom: 20px;
+
+    @media (max-width: 1200px) {
+      font-size: 80px;
+      line-height: 80px;
+      padding-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+      font-size: 45px;
+      line-height: 45px;
+    }
+    @media (max-width: 480px) {
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
 
   .qualification {
     color: $dark-blue;
     font-weight: 400;
     font-size: 64px;
-    line-height: 76px;
+    line-height: 64px;
+
+    @media (max-width: 1200px) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+    @media (max-width: 768px) {
+      font-size: 29px;
+      line-height: 29px;
+
+    }
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -92,6 +143,9 @@
     height: 4px;
     width: 100px;
     background-color: $light-blue;
+    @media (max-width: 480px) {
+      width: 64px;
+    }
   }
 }
 
@@ -102,6 +156,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   span {
     writing-mode: vertical-lr;

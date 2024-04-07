@@ -15,6 +15,14 @@ h1 {
   font-weight: 700;
   line-height: 108px;
   margin: 0;
+
+  @media (max-width: 1200px) {
+    font-size: 68px;
+  }
+  @media (max-width: 768px) {
+    font-size: 45px;
+    line-height: 54px;
+  }
 }
 
 h2 {
@@ -22,6 +30,11 @@ h2 {
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 h3 {
@@ -29,6 +42,11 @@ h3 {
   font-weight: 400;
   font-size: 23px;
   line-height: 27px;
+
+  @media (max-width: 768px) {
+    font-size: 23px;
+    line-height: 27px;
+  }
 }
 
 h4 {
@@ -37,6 +55,11 @@ h4 {
   font-weight: 700;
   line-height: 38px;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 23px;
+    line-height: 27px;
+  }
 }
 
 p {
@@ -45,6 +68,11 @@ p {
   font-weight: 400;
   line-height: 19px;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 a {

@@ -1,4 +1,4 @@
-<div class="project-card-container">
+<div class="project-card-container" *ngIf="!isMobileView">
   <div class="image" *ngIf="project.isImageLeft">
     <img [src]="project.imagePath" alt="{{ project.title }}" />
   </div>
@@ -17,5 +17,24 @@
   </div>
   <div class="image" *ngIf="!project.isImageLeft">
     <img [src]="project.imagePath" alt="{{ project.title }}" />
+  </div>
+</div>
+
+<div class="project-card-container" *ngIf="isMobileView">
+  <div class="image">
+    <img [src]="project.imagePath" alt="{{ project.title }}" />
+  </div>
+  <div class="text-container">
+    <h2>{{ project.title }}</h2>
+    <h3>{{ project.technologies }}</h3>
+    <p>{{ project.description[selectedLanguage] }}</p>
+    <div class="buttons-container">
+      <a href="{{ project.link }}">
+        <button class="button-live-test" mat-raised-button>Live test</button>
+      </a>
+      <a href="{{ project.github }}" target="_blank">
+        <button class="button-github" mat-raised-button>Github</button>
+      </a>
+    </div>
   </div>
 </div>
