@@ -24,7 +24,7 @@
 
         <form
           class="contact-form"
-          (ngSubmit)="onSubmit(contactForm)"
+          (ngSubmit)="onSubmit(contactForm); openDialog()"
           #contactForm="ngForm"
           autocomplete="off"
         >
@@ -122,3 +122,4 @@
     </div>
   </div>
 </div>
+

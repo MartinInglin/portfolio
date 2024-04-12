@@ -2,16 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
-interface Project {
-  title: string;
-  technologies: string;
-  description: { [key: string]: string };
-  link: string;
-  github: string;
-  imagePath: string;
-  isImageLeft: boolean;
-}
+import { Project } from "./../portfolio.component";
 
 @Component({
   selector: 'app-project-card',
@@ -25,7 +16,7 @@ export class ProjectCardComponent {
   selectedLanguage: string = '';
   isMobileView = isSmallScreen();
 
-  constructor(public translateService: TranslateService) {}
+  constructor(public translateService: TranslateService ) {}
 
   ngOnInit() {
     this.selectedLanguage = 'en';

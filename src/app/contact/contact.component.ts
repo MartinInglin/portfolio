@@ -3,6 +3,9 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogContactComponent } from './dialog-contact/dialog-contact.component';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-contact',
@@ -22,10 +25,10 @@ export class ContactComponent {
     privacyPolicy: false,
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://martin-inglin.ch/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -35,7 +38,12 @@ export class ContactComponent {
     },
   };
 
+  constructor(public dialog: MatDialog, public dataService: DataService) {
+  }
+
   onSubmit(ngForm: NgForm) {
+    this.dataService.contactData = this.contactData;
+    
     if (
       ngForm.submitted &&
       ngForm.form.valid &&
@@ -47,17 +55,28 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.privacyPolicy = false;
+            const hiddenCheckbox = document.querySelector('.checkbox-container input[type="checkbox"]') as HTMLInputElement;
+            if (hiddenCheckbox) {
+              hiddenCheckbox.checked = false;
+            }
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.privacyPolicy) {
+    } else if (
+      ngForm.submitted &&
+      ngForm.form.valid &&
+      this.mailTest &&
+      this.privacyPolicy
+    ) {
       this.http.post(this.post.endPoint, null, this.post.options).subscribe({
         next: (response) => {
           console.info('Test email sent successfully!');
           ngForm.resetForm();
+          this.privacyPolicy = false;
         },
         error: (error) => {
           console.error('Test email failed:', error);
@@ -69,5 +88,14 @@ export class ContactComponent {
 
   checkPrivacyPolicy() {
     this.privacyPolicy = !this.privacyPolicy;
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogContactComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
   }
 }

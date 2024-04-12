@@ -1,0 +1,15 @@
+<div class="dialog-content-container">
+  <h2 mat-dialog-title>{{ "CONTACT_DIALOG_TITLE" | translate }}</h2>
+  <mat-dialog-content>
+    <div class="confirmation-user">
+        <p>Name: {{ dataService.contactData.name }}</p>
+        <p>Email: {{ dataService.contactData.email }}</p>
+        <p>{{ "CONTACT_DIALOG_MESSAGE" | translate }}: {{ dataService.contactData.message}}</p>
+    </div>
+
+    <p>{{ "CONTACT_DIALOG_THANK_YOU" | translate }}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button class="button" (click)="onNoClick()">Ok</button>
+  </mat-dialog-actions>
+</div>

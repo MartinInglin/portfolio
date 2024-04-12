@@ -1,0 +1,71 @@
+@import "./../../../styles.scss";
+
+.dialog-content-container {
+  background-color: $background;
+  box-shadow: inset 0px 0px 8px 2px rgba($color: #000000, $alpha: 0.1);
+  padding: 24px;
+}
+
+h4 {
+    padding: 0 24px;
+}
+
+.confirmation-user {
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+
+    p {
+        color: black;
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+p {
+    padding-bottom: 8px;
+}
+
+button {
+
+  height: 58px;
+  width: 165px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  transition: all 125ms ease-in-out;
+  background-color: $light-green;
+
+  &:hover {
+    background-color: $light-blue;
+    transition: all 125ms ease-in-out;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    line-height: 19px;
+    height: auto;
+    padding: 14px;
+    width: 105px;
+  }
+}
+
+.mat-mdc-dialog-actions {
+    padding: 0;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+::ng-deep .mdc-button__label {
+    color: white;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Poppins';
+
+    @media (max-width: 1200px) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+}

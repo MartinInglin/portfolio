@@ -8,31 +8,35 @@
   "ABOVE_THE_FOLD_SCROLL_DOWN": "Scroll down",
 
   "ABOUT_ME_TITLE": "About me",
-  "ABOUT_ME_FIRST_SPAN": "My name is Martin and I am motivated from toe to tip to realize your project. My motto: The horizon is our creativity.",
+  "ABOUT_ME_FIRST_SPAN": "I am full stack developer motivated to the fingertips to realize your project. My motto: The horizon is our creativity.",
   "ABOUT_ME_SECOND_SPAN": "You have an idea for an application that changes the world? You want to build your website and impress your customers? I would love to help you to make your visions come true.",
   "ABOUT_ME_THIRD_SPAN": "You are already on your journey and need support for your team? Let's find out how I can help you the best.",
 
   "SKILLS_TITLE": "Skills",
-  "SKILLS_TEXT": "The following tools help me to create your projects.",
+  "SKILLS_TEXT": "The following technologies and concepts help me to create your projects.",
   "SKILLS_BUTTON": "Get in touch",
 
   "PORTFOLIO_TITLE": "Portfolio",
-  "PORTFOLIO_TEXT": "A selection of my finished projects.",
+  "PORTFOLIO_TEXT": "A selection of my finished projects. Click on a project to see my skills in action.",
 
   "CONTACT_TITLE": "Contact",
   "CONTACT_SUBTITLE": "How can I help you?",
   "CONTACT_TEXT_PART_ONE": "Please contact me by this form. I am happy to hear from you and curios to know about your projects.",
   "CONTACT_TEXT_PART_TWO": "Need a developer?",
-  "CONTACT_TEXT_PART_THREE": "Please contact me.",
+  "CONTACT_TEXT_PART_THREE": "Contact me.",
   "CONTACT_MESSAGE": "Message",
   "CONTACT_PRIVACY_POLICY_PART_ONE": "I have read the",
   "CONTACT_PRIVACY_POLICY_PART_TWO": "privacy policy",
-  "CONTACT_PRIVACY_POLICY_PART_THREE": " and confirm the usage of my data.",
-  "CONTACT_SUBMIT": "Submit",
+  "CONTACT_PRIVACY_POLICY_PART_THREE": " and agree to the processing of my data as outlined.",
+  "CONTACT_SUBMIT": "Send message",
   "CONTACT_MISSING_NAME": "Please enter your name.",
   "CONTACT_MISSING_EMAIL": "Please enter your mail address.",
   "CONTACT_MISSING_MESSAGE": "Please enter a message.",
   "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY": "Please check the privacy policy.",
+
+  "CONTACT_DIALOG_TITLE": "Message submitted",
+  "CONTACT_DIALOG_MESSAGE": "Message",
+  "CONTACT_DIALOG_THANK_YOU": "Thank you for your interest. I will respond soon.",
 
   "FOOTER_IMPRINT": "Imprint"
 }

@@ -1,7 +1,7 @@
 <div class="project-card-container" *ngIf="!isMobileView">
-  <div class="image" *ngIf="project.isImageLeft">
-    <img [src]="project.imagePath" alt="{{ project.title }}" />
-  </div>
+  <a class="image" *ngIf="project.isImageLeft" href="{{ project.link }}" target="_blank">
+    <video [src]="project.video" controls loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;" [muted]="true"></video>
+  </a>
   <div class="text-container">
     <h2>{{ project.title }}</h2>
     <h3>{{ project.technologies }}</h3>
@@ -15,21 +15,21 @@
       </a>
     </div>
   </div>
-  <div class="image" *ngIf="!project.isImageLeft">
-    <img [src]="project.imagePath" alt="{{ project.title }}" />
-  </div>
+  <a class="image" *ngIf="!project.isImageLeft" href="{{ project.link }}" target="_blank">
+    <video [src]="project.video" controls loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;" [muted]="true"></video>
+  </a>
 </div>
 
 <div class="project-card-container" *ngIf="isMobileView">
-  <div class="image">
-    <img [src]="project.imagePath" alt="{{ project.title }}" />
-  </div>
+  <a class="image" href="{{ project.link }}" target="_blank">
+    <video [src]="project.video" controls loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;" [muted]="true"></video>
+  </a>
   <div class="text-container">
     <h2>{{ project.title }}</h2>
     <h3>{{ project.technologies }}</h3>
     <p>{{ project.description[selectedLanguage] }}</p>
     <div class="buttons-container">
-      <a href="{{ project.link }}">
+      <a href="{{ project.link }}" target="_blank">
         <button class="button-live-test" mat-raised-button>Live test</button>
       </a>
       <a href="{{ project.github }}" target="_blank">
