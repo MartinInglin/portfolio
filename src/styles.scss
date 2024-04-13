@@ -95,6 +95,11 @@ a {
   flex-direction: row;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .no-scroll {
   overflow-y: hidden;
 }

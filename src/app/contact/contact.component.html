@@ -24,7 +24,7 @@
 
         <form
           class="contact-form"
-          (ngSubmit)="onSubmit(contactForm); openDialog()"
+          (ngSubmit)="onSubmit(contactForm)"
           #contactForm="ngForm"
           autocomplete="off"
         >
@@ -82,17 +82,20 @@
           </div>
 
           <div class="privacy-policy">
-            <label class="checkbox-container">
-              <input type="checkbox" (click)="checkPrivacyPolicy()" />
-              <span class="checkmark"></span>
-            </label>
-            <p>
-              {{ "CONTACT_PRIVACY_POLICY_PART_ONE" | translate }}
-              <a href="privacy-policy">
-                {{ "CONTACT_PRIVACY_POLICY_PART_TWO" | translate }}</a
-              >
-              {{ "CONTACT_PRIVACY_POLICY_PART_THREE" | translate }}
-            </p>
+            <div class="row">
+              <label class="checkbox-container">
+                <input type="checkbox" (click)="checkPrivacyPolicy()" />
+                <span class="checkmark"></span>
+              </label>
+              <p>
+                {{ "CONTACT_PRIVACY_POLICY_PART_ONE" | translate }}
+                <a href="privacy-policy">
+                  {{ "CONTACT_PRIVACY_POLICY_PART_TWO" | translate }}</a
+                >
+                {{ "CONTACT_PRIVACY_POLICY_PART_THREE" | translate }}
+              </p>
+            </div>
+            
             @if (!privacyPolicy && contactForm.submitted) {
             <span class="missing-form">{{
               "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY" | translate
@@ -100,11 +103,12 @@
             }
           </div>
 
-          <div class="button" type="submit" value="Submit">
-            <button mat-raised-button>
+          <div class="button" [ngClass]="{ 'enable-button': formComplete }">
+            <button mat-raised-button type="submit" value="Submit">
               {{ "CONTACT_SUBMIT" | translate }}
             </button>
           </div>
+          
         </form>
       </div>
     </div>

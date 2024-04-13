@@ -1,22 +1,25 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { Component, inject, OnInit, ViewChild } from '@angular/core';
+import { FormsModule, NgForm, } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogContactComponent } from './dialog-contact/dialog-contact.component';
 import { DataService } from './services/data.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [MatButtonModule, FormsModule, TranslateModule],
+  imports: [MatButtonModule, FormsModule, TranslateModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  @ViewChild('contactForm') ngForm!: NgForm;
   privacyPolicy: boolean = false;
   http = inject(HttpClient);
+  formComplete: boolean = false;
 
   contactData = {
     name: '',
@@ -24,8 +27,6 @@ export class ContactComponent {
     message: '',
     privacyPolicy: false,
   };
-
-  mailTest = false;
 
   post = {
     endPoint: 'https://martin-inglin.ch/sendMail.php',
@@ -38,25 +39,26 @@ export class ContactComponent {
     },
   };
 
-  constructor(public dialog: MatDialog, public dataService: DataService) {
+  constructor(public dialog: MatDialog, public dataService: DataService) {}
+
+  ngOnInit() {
+    this.enableSendMessageButton();
   }
 
   onSubmit(ngForm: NgForm) {
     this.dataService.contactData = this.contactData;
-    
-    if (
-      ngForm.submitted &&
-      ngForm.form.valid &&
-      !this.mailTest &&
-      this.privacyPolicy
-    ) {
+
+    if (this.formCompleted(ngForm) && ngForm.submitted) {
+      this.openDialog();
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
             this.privacyPolicy = false;
-            const hiddenCheckbox = document.querySelector('.checkbox-container input[type="checkbox"]') as HTMLInputElement;
+            const hiddenCheckbox = document.querySelector(
+              '.checkbox-container input[type="checkbox"]'
+            ) as HTMLInputElement;
             if (hiddenCheckbox) {
               hiddenCheckbox.checked = false;
             }
@@ -66,23 +68,6 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (
-      ngForm.submitted &&
-      ngForm.form.valid &&
-      this.mailTest &&
-      this.privacyPolicy
-    ) {
-      this.http.post(this.post.endPoint, null, this.post.options).subscribe({
-        next: (response) => {
-          console.info('Test email sent successfully!');
-          ngForm.resetForm();
-          this.privacyPolicy = false;
-        },
-        error: (error) => {
-          console.error('Test email failed:', error);
-        },
-        complete: () => console.info('Test email complete'),
-      });
     }
   }
 
@@ -91,11 +76,22 @@ export class ContactComponent {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogContactComponent, {
-    });
+    const dialogRef = this.dialog.open(DialogContactComponent, {});
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
     });
+  }
+
+  enableSendMessageButton() {
+    if (this.ngForm) {
+      this.ngForm.valueChanges?.subscribe(() => {
+        this.formComplete = this.formCompleted(this.ngForm);
+      });
+    }
+  }
+
+  formCompleted(ngForm: NgForm): boolean {
+    return ngForm.form.valid && this.privacyPolicy;
   }
 }

@@ -132,42 +132,13 @@
   }
 }
 
-.input-name {
-  position: relative;
-
-  span {
-    position: absolute;
-    top: 60px;
-    left: 0;
-  }
-}
-
-.input-email {
-  position: relative;
-
-  span {
-    position: absolute;
-    top: 60px;
-    left: 0;
-  }
-}
-
-.input-textarea {
-  position: relative;
-
-  span {
-    position: absolute;
-    top: 230px;
-    left: 0;
-  }
-}
-
 textarea {
   resize: none;
 }
 
 .privacy-policy {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   position: relative;
 
@@ -200,7 +171,7 @@ textarea {
 }
 
 button[mat-raised-button] {
-  background-color: $light-blue;
+  background-color: grey;
   color: white;
   font-size: 23px;
   font-weight: 400;
@@ -209,17 +180,23 @@ button[mat-raised-button] {
   border-radius: 10px;
   transition: all 125ms ease-in-out;
 
-  &:hover {
-    background-color: $light-green;
-    transform: scale(1.1);
-    transition: all 125ms ease-in-out;
-  }
+
 
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 19px;
     height: auto;
+
+    &:hover {
+      background-color: $light-green;
+      transform: scale(1.1);
+      transition: all 125ms ease-in-out;
+    }
   }
+}
+
+.form-complete {
+  background-color: $light-blue;
 }
 
 .color-stains {
