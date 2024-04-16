@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit, ViewChild } from '@angular/core';
-import { FormsModule, NgForm, } from '@angular/forms';
+import { Component, inject, OnInit } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -15,8 +15,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-export class ContactComponent implements OnInit {
-  @ViewChild('contactForm') ngForm!: NgForm;
+export class ContactComponent {
   privacyPolicy: boolean = false;
   http = inject(HttpClient);
   formComplete: boolean = false;
@@ -41,12 +40,8 @@ export class ContactComponent implements OnInit {
 
   constructor(public dialog: MatDialog, public dataService: DataService) {}
 
-  ngOnInit() {
-    this.enableSendMessageButton();
-  }
-
   onSubmit(ngForm: NgForm) {
-    this.dataService.contactData = this.contactData;
+    this.dataService.contactData = { ...this.contactData };
 
     if (this.formCompleted(ngForm) && ngForm.submitted) {
       this.openDialog();
@@ -54,8 +49,9 @@ export class ContactComponent implements OnInit {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            ngForm.resetForm();
             this.privacyPolicy = false;
+            ngForm.resetForm();
+
             const hiddenCheckbox = document.querySelector(
               '.checkbox-container input[type="checkbox"]'
             ) as HTMLInputElement;
@@ -68,6 +64,9 @@ export class ContactComponent implements OnInit {
           },
           complete: () => console.info('send post complete'),
         });
+        setTimeout(() => {
+          this.enableSendMessageButton();
+        }, 500);
     }
   }
 
@@ -78,16 +77,19 @@ export class ContactComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogContactComponent, {});
 
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-    });
+    dialogRef.afterClosed().subscribe((result) => {});
   }
 
   enableSendMessageButton() {
-    if (this.ngForm) {
-      this.ngForm.valueChanges?.subscribe(() => {
-        this.formComplete = this.formCompleted(this.ngForm);
-      });
+    if (
+      this.contactData.name != '' &&
+      this.contactData.email != '' &&
+      this.contactData.message != '' &&
+      this.privacyPolicy
+    ) {
+      this.formComplete = true;
+    } else {
+      this.formComplete = false;
     }
   }
 

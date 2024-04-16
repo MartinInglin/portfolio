@@ -17,7 +17,7 @@ export class PortfolioComponent {
       technologies: 'HTML | CSS | JavaScript',
       description: {
         en: 'An organization tool similar to a Kanban board. Drag and drop functionalities are implemented, you can assign users to a tasks and define subtasks.',
-        de: 'Ein Organisationstool im Stile eines Kanban-Boards. Tasks lassen sich per drag and drop verschieben, User können einem Task zugewiesen und Subtasks definiert werden.',
+        de: 'Ein Organisationstool im Stile eines Kanban-Boards. Tasks lassen sich per Drag and Drop verschieben, User können einem Task zugewiesen und Subtasks definiert werden.',
       },
       video: 'assets/video/join.mp4',
       link: 'https://join.martin-inglin.ch',
@@ -30,7 +30,7 @@ export class PortfolioComponent {
       technologies: 'HTML | CSS | JavaScript',
       description: {
         en: 'A jump and run game around the character Pepe based on object oriented programming. Help him defeating evil Cluck-Zilla.',
-        de: 'Ein Jump and Run Game basierend auf Objekt orientierter Programmierung. Helfen Sie Pepe, die böse Cluck-Zilla zu besiegen.',
+        de: 'Ein Jump and Run Game basierend auf objekt-orientierter Programmierung. Hilf Pepe, die böse Cluck-Zilla zu besiegen.',
       },
       video: 'assets/video/el-pollo-loco.mp4',
       link: 'https://el-pollo-loco.martin-inglin.ch',
@@ -43,7 +43,7 @@ export class PortfolioComponent {
       technologies: 'HTML | CSS | JavaScript | API',
       description: {
         en: 'Based on the public PokéAPI you can find all Pokemons listed and filtered.',
-        de: 'Alle Pokemon der öffentlichen PokéAPI werden gerendert und gefiltert.',
+        de: 'Alle Pokemon der öffentlichen PokéAPI werden dargestellt und können gefiltert werden.',
       },
       video: 'assets/video/pokedex.mp4',
       link: 'https://pokedex.martin-inglin.ch',
@@ -56,7 +56,7 @@ export class PortfolioComponent {
       technologies: 'Angular | Firebase',
       description: {
         en: 'A simple custom relationship management system with create, read, update and delete (CRUD) functionalities.',
-        de: 'Ein einfaches Customer Relationship Management System mit Create, Read, Update und Delete (CRUD) Funktionalitäten.',
+        de: 'Ein einfaches Customer Relationship Management System mit Create-, Read-, Update- und Delete-Funktionalitäten (CRUD).',
       },
       video: 'assets/video/el-pollo-loco.mp4',
       link: 'https://linkToJoin',
@@ -69,7 +69,7 @@ export class PortfolioComponent {
       technologies: 'Angular | Firebase',
       description: {
         en: 'Here goes a back end project.',
-        de: 'Hier wird ein back end Projekt seinen Platz finden.',
+        de: 'Hier wird ein Back End Projekt seinen Platz finden.',
       },
       video: 'assets/video/el-pollo-loco.mp4',
       link: 'https://linkToJoin',

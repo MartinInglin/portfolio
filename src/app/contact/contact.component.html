@@ -37,6 +37,7 @@
               id="name"
               placeholder="Name"
               required
+              (ngModelChange)="this.enableSendMessageButton();"
             />
             @if (!name.valid && contactForm.submitted) {
             <span class="missing-form">{{
@@ -54,7 +55,8 @@
               id="email"
               placeholder="Email"
               required
-              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+              (ngModelChange)="this.enableSendMessageButton();"
             />
             @if (!email.valid && contactForm.submitted) {
             <span class="missing-form">{{
@@ -73,6 +75,7 @@
               rows="10"
               placeholder="{{'CONTACT_MESSAGE' | translate}}"
               required
+              (ngModelChange)="this.enableSendMessageButton();"
             ></textarea>
             @if (!message.valid && contactForm.submitted) {
             <span class="missing-form">{{
@@ -84,7 +87,7 @@
           <div class="privacy-policy">
             <div class="row">
               <label class="checkbox-container">
-                <input type="checkbox" (click)="checkPrivacyPolicy()" />
+                <input type="checkbox" (click)="checkPrivacyPolicy(); this.enableSendMessageButton()" />
                 <span class="checkmark"></span>
               </label>
               <p>
@@ -103,8 +106,8 @@
             }
           </div>
 
-          <div class="button" [ngClass]="{ 'enable-button': formComplete }">
-            <button mat-raised-button type="submit" value="Submit">
+          <div class="button">
+            <button mat-raised-button type="submit" value="Submit" [ngClass]="{ 'enable-button': formComplete }">
               {{ "CONTACT_SUBMIT" | translate }}
             </button>
           </div>

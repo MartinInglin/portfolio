@@ -81,6 +81,7 @@
     line-height: 128px;
     font-weight: 700;
     padding-bottom: 20px;
+    white-space: nowrap;
 
     @media (max-width: 1200px) {
       font-size: 80px;
@@ -110,7 +111,6 @@
     @media (max-width: 768px) {
       font-size: 29px;
       line-height: 29px;
-
     }
     @media (max-width: 480px) {
       font-size: 20px;
@@ -183,4 +183,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  img {
+    max-height: 100%;
+  }
 }
