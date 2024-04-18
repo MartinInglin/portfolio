@@ -1,6 +1,7 @@
 <div class="project-card-container" *ngIf="!isMobileView">
+  <img class="click-me" src="assets/images/click-me-high-resolution-logo-transparent.svg" alt="">
   <a class="image" *ngIf="project.isImageLeft">
-    <video [src]="project.video" loop onclick="this.play()" onmouseout="this.pause(); this.currentTime = 0;" [muted]="true"></video>
+    <video [src]="project.video" onclick="this.play()" [muted]="true"></video>
   </a>
   <div class="text-container">
     <h2>{{ project.title }}</h2>
@@ -21,6 +22,7 @@
 </div>
 
 <div class="project-card-container" *ngIf="isMobileView">
+  <img class="click-me" src="assets/images/click-me-high-resolution-logo-transparent.svg" alt="">
   <a class="image">
     <video [src]="project.video" loop onclick="this.play()" onmouseout="this.pause(); this.currentTime = 0;" [muted]="true"></video>
   </a>
