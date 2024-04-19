@@ -16,7 +16,7 @@ export class PortfolioComponent {
       title: 'Join',
       technologies: 'HTML | CSS | JavaScript',
       description: {
-        en: 'An organization tool similar to a Kanban board. Drag and drop functionalities are implemented, you can assign users to a tasks and define subtasks.',
+        en: 'An organization tool similar to a Kanban board. Drag and drop functionalities are implemented, you can assign users to tasks and define subtasks.',
         de: 'Ein Organisationstool im Stile eines Kanban-Boards. Tasks lassen sich per Drag and Drop verschieben, User können einem Task zugewiesen und Subtasks definiert werden.',
       },
       video: 'assets/video/join.mp4',
@@ -29,7 +29,7 @@ export class PortfolioComponent {
       title: 'El Pollo Loco',
       technologies: 'HTML | CSS | JavaScript',
       description: {
-        en: 'A jump and run game around the character Pepe based on object oriented programming. Help him defeating evil Cluck-Zilla.',
+        en: 'A jump and run game around the character Pepe based on object-oriented programming. Help him defeat evil Cluck-Zilla.',
         de: 'Ein Jump and Run Game basierend auf objekt-orientierter Programmierung. Hilf Pepe, die böse Cluck-Zilla zu besiegen.',
       },
       video: 'assets/video/el-pollo-loco.mp4',
@@ -55,7 +55,7 @@ export class PortfolioComponent {
       title: 'Simple CRM',
       technologies: 'Angular | Firebase',
       description: {
-        en: 'A simple custom relationship management system with create, read, update and delete (CRUD) functionalities.',
+        en: 'A simple custom relationship management system with create, read, update, and delete (CRUD) functionalities.',
         de: 'Ein einfaches Customer Relationship Management System mit Create-, Read-, Update- und Delete-Funktionalitäten (CRUD).',
       },
       video: 'assets/video/el-pollo-loco.mp4',
@@ -65,11 +65,11 @@ export class PortfolioComponent {
       isImageLeft: false,
     },
     {
-      title: 'Back End',
+      title: 'Back-End',
       technologies: 'Angular | Firebase',
       description: {
-        en: 'Here goes a back end project.',
-        de: 'Hier wird ein Back End Projekt seinen Platz finden.',
+        en: 'Here goes a back-end project.',
+        de: 'Hier wird ein Back-End Projekt seinen Platz finden.',
       },
       video: 'assets/video/el-pollo-loco.mp4',
       link: 'https://linkToJoin',
