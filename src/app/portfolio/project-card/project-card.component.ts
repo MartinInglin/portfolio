@@ -3,11 +3,12 @@ import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Project } from "./../portfolio.component";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
 
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [MatButtonModule, CommonModule, TranslateModule],
+  imports: [MatButtonModule, CommonModule, TranslateModule, MatProgressSpinnerModule],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss',
 })
