@@ -2,6 +2,17 @@
 
 .impressum-container {
   padding: 100px;
+
+  @media (max-width: 768px) {
+    padding: 100px 20px;
+
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
 }
 
 .button {

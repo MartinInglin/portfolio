@@ -45,28 +45,7 @@ export class ContactComponent {
 
     if (this.formCompleted(ngForm) && ngForm.submitted) {
       this.openDialog();
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            this.privacyPolicy = false;
-            ngForm.resetForm();
-
-            const hiddenCheckbox = document.querySelector(
-              '.checkbox-container input[type="checkbox"]'
-            ) as HTMLInputElement;
-            if (hiddenCheckbox) {
-              hiddenCheckbox.checked = false;
-            }
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-        setTimeout(() => {
-          this.enableSendMessageButton();
-        }, 500);
+      this.sendEmail(ngForm);
     }
   }
 
@@ -78,6 +57,30 @@ export class ContactComponent {
     const dialogRef = this.dialog.open(DialogContactComponent, {});
 
     dialogRef.afterClosed().subscribe((result) => {});
+  }
+
+  sendEmail(ngForm: NgForm) {
+    this.http
+      .post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: (response) => {
+          this.privacyPolicy = false;
+          ngForm.resetForm();
+
+          const hiddenCheckbox = document.querySelector(
+            '.checkbox-container input[type="checkbox"]'
+          ) as HTMLInputElement;
+          if (hiddenCheckbox) {
+            hiddenCheckbox.checked = false;
+          }
+        },
+        error: (error) => {
+          console.error(error);
+        },
+      });
+    setTimeout(() => {
+      this.enableSendMessageButton();
+    }, 500);
   }
 
   enableSendMessageButton() {

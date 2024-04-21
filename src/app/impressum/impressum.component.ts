@@ -6,8 +6,6 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [MatButtonModule],
   templateUrl: './impressum.component.html',
-  styleUrl: './impressum.component.scss'
+  styleUrl: './impressum.component.scss',
 })
-export class ImpressumComponent {
-
-}
+export class ImpressumComponent {}

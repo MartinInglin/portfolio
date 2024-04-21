@@ -17,7 +17,7 @@
   "SKILLS_BUTTON": "Get in touch",
 
   "PORTFOLIO_TITLE": "Portfolio",
-  "PORTFOLIO_TEXT": "A selection of my finished projects. Click on a project to see my skills in action.",
+  "PORTFOLIO_TEXT": "A selection of my finished projects:",
 
   "CONTACT_TITLE": "Contact",
   "CONTACT_SUBTITLE": "How can I help you?",
@@ -30,7 +30,7 @@
   "CONTACT_PRIVACY_POLICY_PART_THREE": " and agree to the processing of my data as outlined.",
   "CONTACT_SUBMIT": "Send message",
   "CONTACT_MISSING_NAME": "Please enter your name.",
-  "CONTACT_MISSING_EMAIL": "Please enter your mail address.",
+  "CONTACT_MISSING_EMAIL": "Please enter a valid email address.",
   "CONTACT_MISSING_MESSAGE": "Please enter a message.",
   "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY": "Please check the privacy policy.",
 

@@ -41,6 +41,10 @@
   flex-direction: column;
   gap: 35px;
 
+  h1 {
+    white-space: nowrap;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -79,13 +83,17 @@
 
 .portrait-container {
   position: absolute;
-  top: 0;
+  top: 24px;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: end;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 768px) {
+    top: 0px;
+  }
 }
 
 .portrait {

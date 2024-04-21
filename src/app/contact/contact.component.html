@@ -38,6 +38,7 @@
               placeholder="Name"
               required
               (ngModelChange)="this.enableSendMessageButton();"
+              autocomplete="off"
             />
             @if (!name.valid && contactForm.submitted) {
             <span class="missing-form">{{
@@ -57,6 +58,7 @@
               required
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               (ngModelChange)="this.enableSendMessageButton();"
+              autocomplete="off"
             />
             @if (!email.valid && contactForm.submitted) {
             <span class="missing-form">{{
@@ -76,6 +78,7 @@
               placeholder="{{'CONTACT_MESSAGE' | translate}}"
               required
               (ngModelChange)="this.enableSendMessageButton();"
+              autocomplete="off"
             ></textarea>
             @if (!message.valid && contactForm.submitted) {
             <span class="missing-form">{{
