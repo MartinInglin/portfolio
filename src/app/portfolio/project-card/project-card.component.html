@@ -1,7 +1,7 @@
 <div class="project-card-container" *ngIf="!isMobileView">
   <img class="click-me" src="assets/images/click-me-high-resolution-logo-transparent.svg" alt="">
   <a class="image" *ngIf="project.isImageLeft">
-    @defer (on viewport) {
+    @defer (on idle) {
       <video [src]="project.video" onclick="this.play()" [muted]="true" class="video"></video>
     }
     @placeholder {
@@ -25,7 +25,7 @@
     </div>
   </div>
   <a class="image" *ngIf="!project.isImageLeft">
-    @defer (on viewport) {
+    @defer (on idle) {
       <video [src]="project.video" onclick="this.play()" [muted]="true" class="video"></video>
     }
     @placeholder {
@@ -39,7 +39,7 @@
 <div class="project-card-container" *ngIf="isMobileView">
   <img class="click-me" src="assets/images/click-me-high-resolution-logo-transparent.svg" alt="">
   <a class="image">
-    @defer (on viewport) {
+    @defer (on idle) {
       <video [src]="project.video" onclick="this.play()" [muted]="true" class="video"></video>
     }
     @placeholder {
