@@ -1,8 +1,8 @@
 <div class="max-width">
-  <div class="color-stains">
-    <img src="assets/images/color-stains/contact.svg" alt="" />
-  </div>
   <div class="contact-container">
+    <div class="color-stains">
+      <img src="assets/images/color-stains/contact.svg" alt="" />
+    </div>
     <div class="contact-title">
       <div class="title-line">
         <div class="spacer"></div>
@@ -43,7 +43,7 @@
               (blur)="nameBlurred = true"
             />
             @if ((!name.valid && contactForm.submitted) || (nameBlurred &&
-            !name.valid && contactForm.submitted)) {
+            !name.valid)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_NAME" | translate
             }}</span>
@@ -64,7 +64,7 @@
               (blur)="emailBlurred = true"
             />
             @if ((!email.valid && contactForm.submitted) || (emailBlurred &&
-            !email.valid && contactForm.submitted)) {
+            !email.valid)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_EMAIL" | translate
             }}</span>
@@ -86,7 +86,7 @@
               (blur)="messageBlurred = true"
             ></textarea>
             @if ((!message.valid && contactForm.submitted) || (messageBlurred &&
-            !message.valid && contactForm.submitted)) {
+            !message.valid)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_MESSAGE" | translate
             }}</span>

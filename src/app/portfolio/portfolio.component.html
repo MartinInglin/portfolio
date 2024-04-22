@@ -1,13 +1,11 @@
 <div class="max-width">
-  <div class="color-stains stain-blue">
-    <img src="assets/images/color-stains/portfolio-blue.svg" alt="">
-  </div>
-  <div class="color-stains stain-green">
-    <img src="assets/images/color-stains/portfolio-green.svg" alt="">
-  </div>
   <div class="portfolio-container">
-
-
+    <div class="color-stains stain-blue">
+      <img src="assets/images/color-stains/portfolio-blue.svg" alt="" />
+    </div>
+    <div class="color-stains stain-green">
+      <img src="assets/images/color-stains/portfolio-green.svg" alt="" />
+    </div>
 
     <div class="portfolio-text">
       <div class="title-line">
@@ -17,7 +15,10 @@
       <p>{{ "PORTFOLIO_TEXT" | translate }}</p>
     </div>
     <div class="project-cards-container">
-      <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+      <app-project-card
+        *ngFor="let project of projects"
+        [project]="project"
+      ></app-project-card>
     </div>
   </div>
 </div>
