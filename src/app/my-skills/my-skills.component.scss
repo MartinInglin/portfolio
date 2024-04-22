@@ -2,13 +2,17 @@
 
 .curve {
   width: 100%;
-  margin-top: -340px; //set margin till it fits the image
+  margin-top: -500px; //set margin till it fits the image
   position: absolute;
   top: 0;
   left: 0;
 
+  @media (max-width: 2560px) {
+    margin-top: -380px;
+  }
+
   @media (max-width: 1920px) {
-    margin-top: -300px;
+    margin-top: -310px;
   }
 
   @media(max-width: 1200px) {
