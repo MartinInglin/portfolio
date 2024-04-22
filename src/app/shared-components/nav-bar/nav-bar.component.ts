@@ -26,5 +26,6 @@ export class NavBarComponent {
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    document.body.style.overflow = this.isMobileMenuOpen ? 'hidden' : '';
   }
 }

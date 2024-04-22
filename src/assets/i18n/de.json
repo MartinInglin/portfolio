@@ -41,5 +41,8 @@
   "FOOTER_IMPRINT": "Impressum",
 
   "IMPRINT_TITLE": "Impressum",
-  "IMPRINT_BUTTON": "Zurück"
+  "IMPRINT_BUTTON": "Zurück",
+
+  "PRIVACY_POLICY_TITLE": "Datenschutzerklärung",
+  "PRIVACY_POLICY_BUTTON": "Zurück"
 }

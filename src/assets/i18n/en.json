@@ -32,7 +32,7 @@
   "CONTACT_MISSING_NAME": "Please enter your name.",
   "CONTACT_MISSING_EMAIL": "Please enter a valid email address.",
   "CONTACT_MISSING_MESSAGE": "Please enter a message.",
-  "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY": "Please check the privacy policy.",
+  "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY": "Please confirm the privacy policy.",
 
   "CONTACT_DIALOG_TITLE": "Message submitted",
   "CONTACT_DIALOG_MESSAGE": "Message",
@@ -41,5 +41,8 @@
   "FOOTER_IMPRINT": "Imprint",
 
   "IMPRINT_TITLE": "Imprint",
-  "IMPRINT_BUTTON": "Back"
+  "IMPRINT_BUTTON": "Back",
+
+  "PRIVACY_POLICY_TITLE": "Privacy policy",
+  "PRIVACY_POLICY_BUTTON": "Back"
 }
