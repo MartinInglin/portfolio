@@ -118,7 +118,6 @@
       width: 100%;
       box-sizing: border-box;
 
-
       &:focus {
         outline: $light-green 1px solid;
       }
@@ -216,13 +215,19 @@ button[mat-raised-button] {
   top: 0;
   left: 0;
   height: 100%;
-  width: calc(100vw + 500px);
+  width: 100%;
   overflow-y: hidden;
+  @media (max-width: 1920px) {
+    width: calc(100vw + 500px);
+  }
 
   img {
     position: absolute;
     bottom: -600px;
-    right: 140px;
+    right: 0;
+    @media (max-width: 1920px) {
+      right: 140px;
+    }
   }
 }
 
