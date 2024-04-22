@@ -18,7 +18,6 @@ import { CommonModule } from '@angular/common';
 export class ContactComponent {
   privacyPolicy: boolean = false;
   http = inject(HttpClient);
-  formComplete: boolean = false;
   nameBlurred = false;
   emailBlurred = false;
   messageBlurred = false;
@@ -43,7 +42,6 @@ export class ContactComponent {
   constructor(public dialog: MatDialog, public dataService: DataService) {}
 
   onSubmit(ngForm: NgForm) {
-    
     this.dataService.contactData = { ...this.contactData };
 
     if (this.formCompleted(ngForm) && ngForm.submitted) {
@@ -67,9 +65,6 @@ export class ContactComponent {
       .post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
         next: (response) => {
-          this.privacyPolicy = false;
-          ngForm.resetForm();
-
           const hiddenCheckbox = document.querySelector(
             '.checkbox-container input[type="checkbox"]'
           ) as HTMLInputElement;
@@ -82,21 +77,9 @@ export class ContactComponent {
         },
       });
     setTimeout(() => {
-      this.enableSendMessageButton();
+      this.privacyPolicy = false;
+      ngForm.resetForm();
     }, 500);
-  }
-
-  enableSendMessageButton() {
-    if (
-      this.contactData.name != '' &&
-      this.contactData.email != '' &&
-      this.contactData.message != '' &&
-      this.privacyPolicy
-    ) {
-      this.formComplete = true;
-    } else {
-      this.formComplete = false;
-    }
   }
 
   formCompleted(ngForm: NgForm): boolean {

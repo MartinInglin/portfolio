@@ -37,14 +37,13 @@
               id="name"
               placeholder="Name"
               required
-              (ngModelChange)="this.enableSendMessageButton()"
               pattern="[a-zA-Z\s]*"
               minlength="4"
               autocomplete="off"
               (blur)="nameBlurred = true"
             />
             @if ((!name.valid && contactForm.submitted) || (nameBlurred &&
-            !name.valid)) {
+            !name.valid && contactForm.submitted)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_NAME" | translate
             }}</span>
@@ -61,12 +60,11 @@
               placeholder="Email"
               required
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-              (ngModelChange)="this.enableSendMessageButton()"
               autocomplete="off"
               (blur)="emailBlurred = true"
             />
             @if ((!email.valid && contactForm.submitted) || (emailBlurred &&
-            !email.valid)) {
+            !email.valid && contactForm.submitted)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_EMAIL" | translate
             }}</span>
@@ -83,13 +81,12 @@
               rows="10"
               placeholder="{{ 'CONTACT_MESSAGE' | translate }}"
               required
-              (ngModelChange)="this.enableSendMessageButton()"
               autocomplete="off"
               minlength="4"
               (blur)="messageBlurred = true"
             ></textarea>
             @if ((!message.valid && contactForm.submitted) || (messageBlurred &&
-            !message.valid)) {
+            !message.valid && contactForm.submitted)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_MESSAGE" | translate
             }}</span>
@@ -99,10 +96,7 @@
           <div class="privacy-policy">
             <div class="row">
               <label class="checkbox-container">
-                <input
-                  type="checkbox"
-                  (click)="checkPrivacyPolicy(); this.enableSendMessageButton()"
-                />
+                <input type="checkbox" (click)="checkPrivacyPolicy()" />
                 <span class="checkmark"></span>
               </label>
               <p>
