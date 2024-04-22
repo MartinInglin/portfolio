@@ -38,5 +38,8 @@
   "CONTACT_DIALOG_MESSAGE": "Message",
   "CONTACT_DIALOG_THANK_YOU": "Thank you for your interest. I will respond soon.",
 
-  "FOOTER_IMPRINT": "Imprint"
+  "FOOTER_IMPRINT": "Imprint",
+
+  "IMPRINT_TITLE": "Imprint",
+  "IMPRINT_BUTTON": "Back"
 }

@@ -1,7 +1,7 @@
 <div class="max-width position-absolute">
   <div class="nav-bar-container">
     <a href="#above-the-fold">
-      <img src="assets/images/martin-logo-transparent.svg" alt="" />
+      <img src="assets/images/martin-logo-transparent.svg" alt=""/>
     </a>
     <div
       class="burger-menu"
@@ -29,13 +29,18 @@
     <div
       class="menu-mobile-container"
       [ngClass]="{ 'menu-active': isMobileMenuOpen }"
-      (click)="toggleMobileMenu()"
     >
       <div class="menu-mobile">
-        <a href="#about-me">{{ "NAV_BAR_ABOUT_ME" | translate }}</a>
-        <a href="#skills">{{ "NAV_BAR_SKILLS" | translate }}</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">{{ "NAV_BAR_CONTACT" | translate }}</a>
+        <a href="#about-me" (click)="toggleMobileMenu()">{{
+          "NAV_BAR_ABOUT_ME" | translate
+        }}</a>
+        <a href="#skills" (click)="toggleMobileMenu()">{{
+          "NAV_BAR_SKILLS" | translate
+        }}</a>
+        <a href="#portfolio" (click)="toggleMobileMenu()">Portfolio</a>
+        <a href="#contact" (click)="toggleMobileMenu()">{{
+          "NAV_BAR_CONTACT" | translate
+        }}</a>
         <mat-button-toggle-group (change)="onLanguageChange($event)">
           <mat-button-toggle value="en" [checked]="selectedLanguage === 'en'"
             >EN</mat-button-toggle

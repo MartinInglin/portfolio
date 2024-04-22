@@ -1,8 +1,8 @@
 <div class="max-width">
+  <div class="color-stains">
+    <img src="assets/images/color-stains/contact.svg" alt="" />
+  </div>
   <div class="contact-container">
-    <div class="color-stains">
-      <img src="assets/images/color-stains/contact.svg" alt="" />
-    </div>
     <div class="contact-title">
       <div class="title-line">
         <div class="spacer"></div>
@@ -37,10 +37,14 @@
               id="name"
               placeholder="Name"
               required
-              (ngModelChange)="this.enableSendMessageButton();"
+              (ngModelChange)="this.enableSendMessageButton()"
+              pattern="[a-zA-Z\s]*"
+              minlength="4"
               autocomplete="off"
+              (blur)="nameBlurred = true"
             />
-            @if (!name.valid && contactForm.submitted) {
+            @if ((!name.valid && contactForm.submitted) || (nameBlurred &&
+            !name.valid)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_NAME" | translate
             }}</span>
@@ -57,10 +61,12 @@
               placeholder="Email"
               required
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-              (ngModelChange)="this.enableSendMessageButton();"
+              (ngModelChange)="this.enableSendMessageButton()"
               autocomplete="off"
+              (blur)="emailBlurred = true"
             />
-            @if (!email.valid && contactForm.submitted) {
+            @if ((!email.valid && contactForm.submitted) || (emailBlurred &&
+            !email.valid)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_EMAIL" | translate
             }}</span>
@@ -75,12 +81,15 @@
               id="message"
               cols="30"
               rows="10"
-              placeholder="{{'CONTACT_MESSAGE' | translate}}"
+              placeholder="{{ 'CONTACT_MESSAGE' | translate }}"
               required
-              (ngModelChange)="this.enableSendMessageButton();"
+              (ngModelChange)="this.enableSendMessageButton()"
               autocomplete="off"
+              minlength="4"
+              (blur)="messageBlurred = true"
             ></textarea>
-            @if (!message.valid && contactForm.submitted) {
+            @if ((!message.valid && contactForm.submitted) || (messageBlurred &&
+            !message.valid)) {
             <span class="missing-form">{{
               "CONTACT_MISSING_MESSAGE" | translate
             }}</span>
@@ -90,7 +99,10 @@
           <div class="privacy-policy">
             <div class="row">
               <label class="checkbox-container">
-                <input type="checkbox" (click)="checkPrivacyPolicy(); this.enableSendMessageButton()" />
+                <input
+                  type="checkbox"
+                  (click)="checkPrivacyPolicy(); this.enableSendMessageButton()"
+                />
                 <span class="checkmark"></span>
               </label>
               <p>
@@ -101,7 +113,7 @@
                 {{ "CONTACT_PRIVACY_POLICY_PART_THREE" | translate }}
               </p>
             </div>
-            
+
             @if (!privacyPolicy && contactForm.submitted) {
             <span class="missing-form">{{
               "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY" | translate
@@ -110,11 +122,18 @@
           </div>
 
           <div class="button">
-            <button mat-raised-button type="submit" value="Submit" [ngClass]="{ 'enable-button': formComplete }">
+            <button
+              mat-raised-button
+              type="submit"
+              value="Submit"
+              [ngClass]="{
+                'enable-button':
+                  name.valid && email.valid && message.valid && privacyPolicy
+              }"
+            >
               {{ "CONTACT_SUBMIT" | translate }}
             </button>
           </div>
-          
         </form>
       </div>
     </div>
@@ -132,4 +151,3 @@
     </div>
   </div>
 </div>
-

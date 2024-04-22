@@ -1,17 +1,33 @@
 @import "./../../styles.scss";
 
+:host {
+  flex: 1;
+}
+
 .impressum-container {
   padding: 100px;
+  max-width: 1920px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     padding: 100px 20px;
+  }
+}
 
-    h1 {
-      font-size: 28px;
-    }
-    h2 {
-      font-size: 24px;
-    }
+h1 {
+  font-size: 56px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
   }
 }
 

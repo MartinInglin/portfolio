@@ -19,12 +19,14 @@ export class ContactComponent {
   privacyPolicy: boolean = false;
   http = inject(HttpClient);
   formComplete: boolean = false;
+  nameBlurred = false;
+  emailBlurred = false;
+  messageBlurred = false;
 
   contactData = {
     name: '',
     email: '',
     message: '',
-    privacyPolicy: false,
   };
 
   post = {
@@ -41,6 +43,7 @@ export class ContactComponent {
   constructor(public dialog: MatDialog, public dataService: DataService) {}
 
   onSubmit(ngForm: NgForm) {
+    
     this.dataService.contactData = { ...this.contactData };
 
     if (this.formCompleted(ngForm) && ngForm.submitted) {

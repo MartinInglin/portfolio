@@ -38,5 +38,8 @@
   "CONTACT_DIALOG_MESSAGE": "Nachricht",
   "CONTACT_DIALOG_THANK_YOU": "Vielen Dank für deine Nachricht. Ich werde dir in Kürze antworten.",
 
-  "FOOTER_IMPRINT": "Impressum"
+  "FOOTER_IMPRINT": "Impressum",
+
+  "IMPRINT_TITLE": "Impressum",
+  "IMPRINT_BUTTON": "Zurück"
 }

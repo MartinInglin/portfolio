@@ -5,18 +5,27 @@
   word-break: break-word;
 }
 
+h1 {
+  font-size: 56px;
+}
+
 .tab-content {
+  max-width: 1920px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 100px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     padding: 100px 20px;
+  }
+}
 
-    h1 {
-      font-size: 28px;
-    }
-    h2 {
-      font-size: 24px;
-    }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
   }
 }
 

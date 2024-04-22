@@ -1,5 +1,32 @@
 @import "./../../styles.scss";
 
+.curve {
+  width: 100%;
+  margin-top: -340px; //set margin till it fits the image
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 1920px) {
+    margin-top: -300px;
+  }
+
+  @media(max-width: 1200px) {
+    margin-top: -220px;
+  }
+
+  @media (max-width: 950px) {
+    margin-top: -190px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: -190px;
+  }
+  @media (max-width: 480px) {
+    margin-top: -160px;
+  }
+}
+
 .my-skills-container {
   max-width: 1920px;
   width: 100%;
@@ -11,29 +38,6 @@
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     align-items: center;
-  }
-
-  .curve {
-    width: 100%;
-    margin-top: -300px; //set margin till it fits the image
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    @media(max-width: 1200px) {
-      margin-top: -220px;
-    }
-
-    @media (max-width: 950px) {
-      margin-top: -190px;
-    }
-
-    @media (max-width: 768px) {
-      margin-top: -190px;
-    }
-    @media (max-width: 480px) {
-      margin-top: -160px;
-    }
   }
 }
 

@@ -7,6 +7,13 @@ body {
   background-color: #141d2f;
   scroll-behavior: smooth;
   scroll-padding-top: 144px;
+  min-height: 100%;
+}
+
+.display-flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 h1 {
