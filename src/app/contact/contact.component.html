@@ -24,7 +24,12 @@
 
         <form
           class="contact-form"
-          (ngSubmit)="onSubmit(contactForm)"
+          (ngSubmit)="
+            onSubmit(contactForm);
+            nameBlurred = false;
+            emailBlurred = false;
+            messageBlurred = false
+          "
           #contactForm="ngForm"
           autocomplete="off"
         >
