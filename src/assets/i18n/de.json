@@ -8,20 +8,20 @@
   "ABOVE_THE_FOLD_SCROLL_DOWN": "Weiter gehts",
 
   "ABOUT_ME_TITLE": "Über mich",
-  "ABOUT_ME_FIRST_SPAN": "Ich bin Software-Entwickler und motiviert, dein Projekt umzusetzen.",
-  "ABOUT_ME_SECOND_SPAN": "Du hast eine Idee für eine App, die die Welt verändert? Du möchtest deine Website auf Vordermann bringen und deine Kunden begeistern? Gerne helfe ich dir dabei, deine Vorstellungen zu realisieren.",
-  "ABOUT_ME_THIRD_SPAN": "Du hast bereits ein Projekt gestartet und brauchst Unterstützung? Melde dich, damit wir gemeinsam herausfinden, wie ich dir behilflich sein kann.",
+  "ABOUT_ME_FIRST_SPAN": "Ich bin Software-Entwickler und motiviert, Ihr Projekt umzusetzen.",
+  "ABOUT_ME_SECOND_SPAN": "Sie haben eine Idee für eine App, die die Welt verändert? Sie möchten Ihre Website auf Vordermann bringen und Ihre Kunden begeistern? Gerne helfe ich Ihnen dabei, Ihre Vorstellungen zu realisieren.",
+  "ABOUT_ME_THIRD_SPAN": "Sie haben bereits ein Projekt gestartet und brauchen Unterstützung? Melden Sie sich, damit wir gemeinsam herausfinden, wie ich Ihnen behilflich sein kann.",
 
   "SKILLS_TITLE": "Skills",
-  "SKILLS_TEXT": "Mit folgenden Technologien und Konzepten setze ich dein Projekt um.",
+  "SKILLS_TEXT": "Mit folgenden Technologien und Konzepten setze ich Ihr Projekt um.",
   "SKILLS_BUTTON": "Kontakt",
 
   "PORTFOLIO_TITLE": "Portfolio",
   "PORTFOLIO_TEXT": "Eine Auswahl meiner Projekte:",
 
   "CONTACT_TITLE": "Kontakt",
-  "CONTACT_SUBTITLE": "Schreib mir!",
-  "CONTACT_TEXT_PART_ONE": "Ich freue mich darauf, von dir zu lesen und dich bei deinem Projekt zu unterstützen!",
+  "CONTACT_SUBTITLE": "Schreiben Sie mir!",
+  "CONTACT_TEXT_PART_ONE": "Ich freue mich darauf, von Ihnen zu lesen und Sie bei Ihrem Projekt zu unterstützen!",
   "CONTACT_TEXT_PART_TWO": "",
   "CONTACT_TEXT_PART_THREE": "",
   "CONTACT_MESSAGE": "Nachricht",
@@ -29,14 +29,14 @@
   "CONTACT_PRIVACY_POLICY_PART_TWO": "Datenschutzerklärung",
   "CONTACT_PRIVACY_POLICY_PART_THREE": " gelesen und stimme der Verwendung meiner Daten wie beschrieben zu.",
   "CONTACT_SUBMIT": "Nachricht abschicken",
-  "CONTACT_MISSING_NAME": "Bitte trage einen Namen ein.",
-  "CONTACT_MISSING_EMAIL": "Bitte trage eine gültige Email-Adresse ein.",
-  "CONTACT_MISSING_MESSAGE": "Bitte schreibe eine Nachricht.",
-  "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY": "Bitte bestätige die Datenschutzerklärung.",
+  "CONTACT_MISSING_NAME": "Bitte tragen Sie einen Namen ein.",
+  "CONTACT_MISSING_EMAIL": "Bitte tragen Sie eine gültige Email-Adresse ein.",
+  "CONTACT_MISSING_MESSAGE": "Bitte schreiben Sie eine Nachricht.",
+  "CONTACT_MISSING_CONFIRMATION_PRIVACY_POLICY": "Bitte bestätigen Sie die Datenschutzerklärung.",
   
   "CONTACT_DIALOG_TITLE": "Nachricht gesendet",
   "CONTACT_DIALOG_MESSAGE": "Nachricht",
-  "CONTACT_DIALOG_THANK_YOU": "Vielen Dank für deine Nachricht. Ich werde dir in Kürze antworten.",
+  "CONTACT_DIALOG_THANK_YOU": "Vielen Dank für Ihre Nachricht. Ich werde Ihnen in Kürze antworten.",
 
   "FOOTER_IMPRINT": "Impressum",
 

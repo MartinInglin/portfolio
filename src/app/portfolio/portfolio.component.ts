@@ -13,6 +13,45 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PortfolioComponent {
   projects: Project[] = [
     {
+      title: 'Videoflix',
+      technologies: 'Angular | Django | Docker | Redis',
+      description: {
+        en: 'This is a Netflix-Clone with a fully functional registration, authentication and video player.',
+        de: 'Dieser Netflix-Klon bietet neben einem Videoplayer eine voll funktionsfähige Registrierung und Authentifizierung.',
+      },
+      video: 'assets/video/videoflix.mp4',
+      link: 'https://videoflix.martin-inglin.ch',
+      github: 'https://github.com/MartinInglin/videoflix-backend',
+      imagePath: 'assets/images/PC-Mokups/videoflix.png',
+      isImageLeft: true,
+    },
+    {
+      title: 'didacto',
+      technologies: 'React | Firebase',
+      description: {
+        en: 'An app for teachers to create math exams. Please contact me for a test account.',
+        de: 'Mit dieser App können Lehrpersonen Mathematikprüfungen erstellen. Gerne stelle ich Ihnen auf Anfrage einen Test Account zu.',
+      },
+      video: 'assets/video/didacto.mp4',
+      link: 'https://didacto-d.firebaseapp.com/',
+      github: null,
+      imagePath: 'assets/images/PC-Mokups/didacto.png',
+      isImageLeft: false,
+    },
+    {
+      title: 'DA-Bubble',
+      technologies: 'Angular | Firebase',
+      description: {
+        en: 'A simple custom relationship management system with create, read, update, and delete (CRUD) functionalities.',
+        de: 'Ein einfaches Customer Relationship Management System mit Create-, Read-, Update- und Delete-Funktionalitäten (CRUD).',
+      },
+      video: 'assets/video/da-bubble.mp4',
+      link: 'https://da-bubble.martin-inglin.ch',
+      github: 'https://github.com/MartinInglin/da-bubble',
+      imagePath: 'assets/images/PC-Mokups/da-bubble.png',
+      isImageLeft: true,
+    },
+    {
       title: 'Join',
       technologies: 'HTML | CSS | JavaScript',
       description: {
@@ -23,7 +62,7 @@ export class PortfolioComponent {
       link: 'https://join.martin-inglin.ch',
       github: 'https://github.com/MartinInglin/join',
       imagePath: 'assets/images/PC-Mokups/join.png',
-      isImageLeft: true,
+      isImageLeft: false,
     },
     {
       title: 'El Pollo Loco',
@@ -36,47 +75,10 @@ export class PortfolioComponent {
       link: 'https://el-pollo-loco.martin-inglin.ch',
       github: 'https://github.com/MartinInglin/el-pollo-loco',
       imagePath: 'assets/images/PC-Mokups/el-pollo-loco.png',
-      isImageLeft: false,
-    },
-    {
-      title: 'Pokedex',
-      technologies: 'HTML | CSS | JavaScript | API',
-      description: {
-        en: 'Based on the public PokéAPI you can find all Pokemons listed and filtered.',
-        de: 'Alle Pokemon der öffentlichen PokéAPI werden dargestellt und können gefiltert werden.',
-      },
-      video: 'assets/video/pokedex.mp4',
-      link: 'https://pokedex.martin-inglin.ch',
-      github: 'https://github.com/MartinInglin/pokedex',
-      imagePath: 'assets/images/PC-Mokups/pokedex.png',
       isImageLeft: true,
     },
-    {
-      title: 'Simple CRM',
-      technologies: 'Angular | Firebase',
-      description: {
-        en: 'A simple custom relationship management system with create, read, update, and delete (CRUD) functionalities.',
-        de: 'Ein einfaches Customer Relationship Management System mit Create-, Read-, Update- und Delete-Funktionalitäten (CRUD).',
-      },
-      video: 'assets/video/el-pollo-loco.mp4',
-      link: 'https://linkToJoin',
-      github: 'https://linkToGithub',
-      imagePath: 'assets/images/PC-Mokups/simple-crm.png',
-      isImageLeft: false,
-    },
-    {
-      title: 'Back-End',
-      technologies: 'Angular | Firebase',
-      description: {
-        en: 'Here goes a back-end project.',
-        de: 'Hier wird ein Back-End Projekt seinen Platz finden.',
-      },
-      video: 'assets/video/el-pollo-loco.mp4',
-      link: 'https://linkToJoin',
-      github: 'https://linkToGithub',
-      imagePath: 'assets/images/PC-Mokups/pokedex.png',
-      isImageLeft: true,
-    },
+
+
   ];
 }
 
@@ -86,7 +88,7 @@ export interface Project {
   description: { [key: string]: string };
   video: string;
   link: string;
-  github: string;
+  github: string | null;
   imagePath: string;
   isImageLeft: boolean;
 }

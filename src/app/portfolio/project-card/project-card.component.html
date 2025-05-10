@@ -19,9 +19,12 @@
       <a href="{{ project.link }}" target="_blank">
         <button class="button-live-test" mat-raised-button>Live test</button>
       </a>
-      <a href="{{ project.github }}" target="_blank">
-        <button class="button-github" mat-raised-button>Github</button>
-      </a>
+      @if (project.github !== null) {
+        <a href="{{ project.github }}" target="_blank">
+          <button class="button-github" mat-raised-button>Github</button>
+        </a>
+      }
+
     </div>
   </div>
   <a class="image" *ngIf="!project.isImageLeft">
